@@ -23,7 +23,7 @@ app.run(function($ionicPlatform) {
 });
 
 app.factory('socket', function(socketFactory) {
-    var myIoSocket = io.connect('http://104.131.94.246:8787');
+    var myIoSocket = io.connect('http://');
     mySocket = socketFactory({
         ioSocket: myIoSocket
     });
