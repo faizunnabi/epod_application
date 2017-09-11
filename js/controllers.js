@@ -467,7 +467,7 @@ app.controller('ProcessController', function($scope, socket, $ionicHistory, $ion
                     });
             };
             $scope.uploadPics = function() {
-                var server = "http://104.131.94.246/epod/api/camera";
+                var server = "";
                 pic_names = [];
                 if (photos.length > 0 || photos.length < 6) {
                     for (var i = 0; i < photos.length; i++) {
@@ -478,7 +478,7 @@ app.controller('ProcessController', function($scope, socket, $ionicHistory, $ion
                             fileName: photos[i].substr(photos[i].lastIndexOf('/') + 1),
                             chunkedMode: false,
                             mimeType: "image/jpg",
-                            headers: { 'X-API-KEY': '$2a$06$0PULorCAzSy.7trA0ATd' }
+                            headers: { 'X-API-KEY': 'api_key' }
                         };
                         $cordovaFileTransfer.upload(server, filePath, options).then(function(result) {
                             $ionicLoading.hide();
