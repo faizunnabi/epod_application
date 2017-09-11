@@ -1,0 +1,32 @@
+<ion-view view-title="delivery" cache-view="false">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-clear" ng-click="myGoBack()"><i class="ion-ios-arrow-back"></i> Back</button>
+        <h3 class="title"><i class="ion-android-cart"></i> Deliveries</h3>
+    </ion-header-bar>
+    <ion-content class="page has-footer has-header">
+        <ion-list ng-if="jobs.result !='Error'" can-swipe="listCanSwipe">
+            <ion-item ng-repeat="job in jobs.data track by job.id" ng-click="show_details({{job.id}})">
+                <span class="item-note"><i class="ion-ios-bell-outline positive"></i> {{job.priority}}</span>
+                <h2 class="positive">Order id : {{job.id}}</h2>
+                <span class="item-note"><i class="ion-iphone positive"></i> {{job.recipient_mobile}}</span>
+                <p><i class="ion-person positive"></i> {{job.recipient_name}}</p>
+                <p><i class="ion-map positive"></i> {{job.recipient_address}}</p>
+                <p><i class="ion-ios-clock-outline positive"></i> {{job.d_date}}<span class="item-note"><i class="ion-ios-location-outline positive"></i> {{job.landmark}}</span></p>
+                <!--<ion-option-button class="button-royal" ng-click="start_tracking()">
+                    <i class="ion-location" style="font-size: 20px;"></i>&nbsp;&nbsp;Track
+                </ion-option-button>-->
+                <ion-option-button class="button-assertive" ng-click="start_navigation(job.latitude,job.longitude)">
+                    <i class="ion-navigate" style="font-size: 20px;"></i>&nbsp;&nbsp;Map
+                </ion-option-button>
+                <ion-option-button class="button-balanced" ng-click="call_recipient({{job.recipient_mobile}})">
+                    <i class="ion-ios-telephone" style="font-size: 20px;"></i>&nbsp;&nbsp;Call
+                </ion-option-button>
+
+            </ion-item>
+        </ion-list>
+        <div ng-if="jobs.result =='Error'" class="padding empty_list"></div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive">
+        <div class="center_block" style="font-weight:normal;font-size:12px;">Copyright &copy; 2017 Al Rumaithy Est.</div>
+    </div>
+</ion-view>

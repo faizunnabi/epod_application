@@ -1,0 +1,38 @@
+<ion-view view-title="order_process">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-clear" ng-click="myGoBack()"><i class="ion-ios-arrow-back"></i> Back</button>
+        <h3 class="title"><i class="ion-gear-a"></i> Process</h3>
+    </ion-header-bar>
+    <ion-content class="page has-footer has-header" scroll="false">
+        <div class="list padding">
+
+            <label class="item item-input">
+              <!--<span class="input-label">Receiver Name</span>-->
+              <i class="icon ion-person placeholder-icon"></i>
+              <input type="text" ng-model="receiver.name" placeholder="Receiver Name">
+            </label>
+            <label class="item item-input">
+              <!--<span class="input-label">Note</span>-->
+              <i class="icon ion-compose placeholder-icon"></i>
+              <textarea row="3" ng-model="receiver.note" placeholder="Special notes"></textarea>
+
+            </label>
+
+        </div>
+        <div class="button-bar padding">
+            <button class="button icon ion-camera button-positive button-full" ng-click="takePicture()"></button>
+            <button class="button icon ion-images button-positive button-full" ng-click="selectPicture()"></button>
+            <button class="button icon ion-ios-upload-outline button-positive button-full" ng-click="uploadPics()"></button>
+        </div>
+        <canvas id="c" class="stable"></canvas>
+    </ion-content>
+    <ion-footer-bar class="bar-positive">
+        <div class="title">
+            <div class="row">
+                <div class="col"><button class="button button-clear center_block" ng-click="saveData()"><i class="ion-android-checkmark-circle"></i> Submit</button></div>
+
+            </div>
+        </div>
+    </ion-footer-bar>
+
+</ion-view>

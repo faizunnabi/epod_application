@@ -1,0 +1,24 @@
+<ion-view view-title="Login" cache-view="false">
+    <ion-content class="login_page">
+
+        <div class="page-container">
+
+            <div class="list padding">
+                <img src="img/logoico.png" width="180" class="center_block" />
+
+                <label class="item item-input login-input">
+                  <input type="text" onfocus="this.value=''; this.style.color='#fff'"  placeholder="Email Id" ng-model="user.name">
+              </label>
+                <label class="item item-input login-input">
+                  <input type="password" onfocus="this.value=''; this.style.color='#fff'" placeholder="Password" ng-model="user.pass">
+              </label>
+                <div style="margin-top: 20px;text-align:right;">
+                    <button class="custom_bt" ng-click="check_login()">LOGIN</button>
+                </div>
+                <p class="assertive">{{err_mssg}}</p>
+                <!--<h4 class="divider">OR</h4>
+            <a href="#" class="stable" style="font-size:14px;text-decoration: none;">Click here to register</a>-->
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

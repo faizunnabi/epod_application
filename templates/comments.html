@@ -1,0 +1,19 @@
+<ion-view view-title="all_jobs" cache-view="false">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-clear" ng-click="myGoBack()"><i class="ion-ios-arrow-back"></i> Back</button>
+        <h3 class="title"><i class="ion-chatbox-working"></i> All Comments</h3>
+    </ion-header-bar>
+    <ion-content class="page has-footer has-header">
+        <ion-list ng-if="comments.result !='Error'" can-swipe="listCanSwipe">
+            <h2 class="positive padding">Ticket id : {{ticket_id}}</h2>
+            <!--<ion-item ng-hide="comments.data.length>0">No comments available !</ion-item>-->
+            <ion-item ng-repeat="c in comments.data track by c.id">
+                <p>{{c.comment}}<span class="item-note"><i class="ion-ios-clock-outline positive"></i> {{c.date}}</span></p>
+            </ion-item>
+        </ion-list>
+        <div ng-if="comments.result =='Error'" class="padding empty_list"></div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive">
+        <div class="center_block" style="font-weight:normal;font-size:12px;">Copyright &copy; 2017 Al Rumaithy Est.</div>
+    </div>
+</ion-view>

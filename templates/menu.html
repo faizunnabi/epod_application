@@ -1,0 +1,30 @@
+<ion-view view-title="Menu" cache-view="false">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <h2 class="title"><i class="ion-grid"></i> Menu</h2>
+        <button ng-click="navigator()" ng-class="{'button button-clear icon-left ion-ios-navigate':active, 'button button-clear icon-left ion-ios-navigate-outline':!active}"></button>
+    </ion-header-bar>
+    <div class="bar bar-subheader bar-contrast">
+        <h4 class="title stable" style="font-weight:normal;font-size:12px;">Welcome Mr.{{session_auth}}</h4>
+    </div>
+    <ion-content class="page has-footer has-header has-subheader" scroll="false">
+        <div class="page-container">
+            <div class="page-content menu_page">
+                <div class="row  menus">
+                    <div class="col"><a ui-sref="all_jobs" class="button menu_bt positive"><i class="ion-clipboard"></i><h4>Jobs</h4></a></div>
+                    <div class="col"><a ui-sref="delivery" class="button menu_bt positive"><i class="ion-android-cart"></i><h4>Delivery</h4></a></div>
+                </div>
+                <div class="row  menus">
+                    <div class="col"><a ui-sref="history" class="button menu_bt positive"><i class="ion-calendar"></i><h4>History</h4></a></div>
+                    <div class="col"><a ui-sref="personal" class="button menu_bt positive"><i class="ion-person"></i><h4>Personal</h4></a></div>
+                </div>
+                <div class="row  menus">
+                    <div class="col"><a ui-sref="tab" class="button menu_bt positive"><i class="ion-chatbox-working"></i><h4>Support</h4></a></div>
+                    <div class="col"><a ui-sref="signout" class="button menu_bt positive"><i class="ion-log-out"></i><h4>Log Out</h4></a></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive">
+        <div class="center_block" style="font-weight:normal;font-size:12px;">Copyright &copy; 2017 Al Rumaithy Est.</div>
+    </div>
+</ion-view>

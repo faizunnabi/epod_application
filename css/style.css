@@ -1,0 +1,209 @@
+/* Empty. Add your own CSS if you like */
+
+table tr td {
+    padding: 5px;
+}
+
+.item-content {
+    background-color: transparent !important;
+}
+
+.login_page {
+    background: url(../img/login_vozo.png) no-repeat center;
+    background-size: cover;
+}
+
+.page {
+    background: #e5e5e5;
+    background: -webkit-radial-gradient( #f5f5f5 40%, #e5e5e5 60%);
+    background: -o-radial-gradient(#f5f5f5 40%, #e5e5e5 60%);
+    background: -moz-radial-gradient(#f5f5f5 40%, #e5e5e5 60%);
+    background: radial-gradient(#f5f5f5 40%, #e5e5e5 60%);
+}
+
+.bar-contrast {
+    background: #056bab;
+    color: #f5f5f5 !important;
+}
+
+.page-container {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-content {
+    width: 100%;
+    text-align: center;
+}
+
+.item-input {
+    margin: 10px 0px;
+}
+
+.mycheck {
+    border: none !important;
+    margin: 0px 0px !important;
+}
+
+.login-input {
+    width: 100%;
+    background: none !important;
+    margin: 10px 0px;
+    color: #fff !important;
+    border: none;
+    border-bottom: 1px #fff solid !important;
+    outline: none;
+    padding: 0 !important;
+}
+
+.empty_list {
+    width: 100%;
+    height: 100%;
+    background: url(../img/empty_bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.center_block {
+    display: block;
+    margin: auto;
+}
+
+.divider {
+    position: relative;
+    color: #f7f7f7;
+    margin: 30px;
+}
+
+.divider:before {
+    content: '';
+    width: 50%;
+    height: 1px;
+    background: #f7f7f7;
+    position: absolute;
+    left: -20px;
+    top: 10px;
+}
+
+.divider:after {
+    content: '';
+    width: 50%;
+    height: 1px;
+    background: #f7f7f7;
+    position: absolute;
+    right: -20px;
+    top: 10px;
+}
+
+.menu_bt {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 0 !important;
+    box-shadow: 0px 0px 1px #aeaeae;
+}
+
+.menu_bt i {
+    font-size: 60px;
+}
+
+.menu_bt h4 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.custom-avatar {
+    background: url(../img/loginbg.png);
+    text-align: center;
+}
+
+.custom-avatar img {
+    display: block;
+    width: 120px !important;
+    height: 120px;
+    margin: auto !important;
+    border-radius: 50%;
+}
+
+.custom_bt {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 30px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    color: #222;
+}
+
+.logo_login {
+    margin: auto;
+}
+
+.custom_bt:hover,
+.custom_bt:active,
+.custom_bt:focus {
+    background: rgba(255, 255, 255, 0.5);
+    color: #222;
+}
+
+.menus .col {
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.menus .col a {
+    width: 100% !important;
+}
+
+.item-content {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.slider {
+    height: 100%;
+}
+
+.slider-slide {
+    padding-top: 80px;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+#logo {
+    margin: 30px 0px;
+}
+
+#list {
+    width: 170px;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+#list ol {
+    margin-top: 30px;
+}
+
+#list ol li {
+    text-align: left;
+    list-style: decimal;
+    margin: 10px 0px;
+}
+
+.button.ng-hide {
+    display: none;
+}
+
+.button-right {
+    display: block !important;
+    width: 100% !important;
+    text-align: right !important;
+}

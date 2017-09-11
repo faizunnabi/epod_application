@@ -1,0 +1,21 @@
+<ion-view view-title="personal" cache-view="false">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-clear" ng-click="myGoBack()"><i class="ion-ios-arrow-back"></i> Back</button>
+        <h3 class="title"><i class="ion-person"></i> Personal</h3>
+    </ion-header-bar>
+    <ion-content class="page has-footer has-header" scroll="false">
+        <div class="list card">
+            <div class="item custom-avatar">
+                <img src="http://104.131.94.246/epod/assets/img/profile/{{profile_detail.data[0].profile_pic}}">
+                <h1 class="title stable">{{profile_detail.data[0].first_name}} {{profile_detail.data[0].last_name}}</h1>
+            </div>
+            <div class="item item-icon-left"><b><i class="icon ion-person positive"></i> Username</b> {{profile_detail.data[0].username}}</div>
+            <div class="item item-icon-left"><b><i class="icon ion-email positive"></i> Email</b> {{profile_detail.data[0].email}}</div>
+            <div class="item item-icon-left"><b><i class="icon ion-android-call positive"></i> Contact No.</b> {{profile_detail.data[0].phone}}</div>
+            <div class="item item-icon-left item-text-wrap"><b><i class="icon ion-ios-location-outline positive"></i> Company</b> {{profile_detail.data[0].company}}</div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive">
+        <div class="center_block" style="font-weight:normal;font-size:12px;">Copyright &copy; 2017 Al Rumaithy Est.</div>
+    </div>
+</ion-view>

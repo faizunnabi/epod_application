@@ -1,0 +1,19 @@
+<ion-view view-title="history" cache-view="false">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-clear" ng-click="myGoBack()"><i class="ion-ios-arrow-back"></i> Back</button>
+        <h3 class="title"><i class="ion-calendar"></i> History</h3>
+    </ion-header-bar>
+    <ion-content class="page has-footer has-header">
+        <ion-list ng-if="jobs.result !='Error'">
+            <ion-item ng-repeat="job in jobs.data track by $index">
+                <h3 class="positive">Order id : {{job.order_id}}</h3>
+                <h4><i class="ion-person positive"></i> {{job.name}}</h4>
+                <p><i class="ion-ios-clock-outline positive"></i> {{job.date}}</p>
+            </ion-item>
+        </ion-list>
+        <div ng-if="jobs.result =='Error'" class="padding empty_list"></div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive">
+        <div class="center_block" style="font-weight:normal;font-size:12px;">Copyright &copy; 2017 Al Rumaithy Est.</div>
+    </div>
+</ion-view>

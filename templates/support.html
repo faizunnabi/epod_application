@@ -1,0 +1,36 @@
+<ion-view view-title="all_jobs" cache-view="false">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-clear" ng-click="myGoBack()"><i class="ion-ios-arrow-back"></i> Back</button>
+        <h3 class="title"><i class="ion-chatbox-working"></i> Support</h3>
+        
+    </ion-header-bar>
+    <ion-content class="page has-footer has-header" scroll="false">
+        <div class="list padding">
+            <label class="item item-input">
+                <input type="text" placeholder="Subject" ng-model="support.subject">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Select priority
+                </div>
+                <select ng-model="support.priority">
+                    <option disabled selected>--Select Priority--</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <textarea placeholder="Description" ng-model="support.description" rows="5">
+                    
+                </textarea>
+            </label>
+            <div padding style="margin:10px;">
+                  <button class="button button-positive button-full" ng-click="send_support()">Submit</button>
+              </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-positive">
+        <div class="center_block" style="font-weight:normal;font-size:12px;">Copyright &copy; 2017 Al Rumaithy Est.</div>
+    </div>
+</ion-view>

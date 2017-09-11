@@ -1,0 +1,64 @@
+<ion-view view-title="job_detail" cache-view="false">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-clear" ng-click="myGoBack()"><i class="ion-ios-arrow-back"></i> Back</button>
+        <h3 class="title"><i class="ion-ios-paper-outline"></i> Order Details</h3>
+        <button class="button button-clear icon ion-ios-telephone-outline" ng-click="call_action()"></button>
+    </ion-header-bar>
+    <ion-content class="page has-footer has-header">
+        <div class="card">
+            <div class="item item-divider item-light">
+                Order Id : {{details.data[0].id}}<span class="item-note" style="font-size:11px;"><i class="ion-calendar positive"></i>&nbsp;{{details.data[0].order_date}}</span>
+            </div>
+            <div class="item item-text-wrap">
+                <div class="list">
+
+                    <div class="item">
+                        <span class="item-note"><i class="ion-ios-bell-outline positive"></i> {{details.data[0].priority}}</span> Special Instructions : {{details.data[0].special_instructions}}
+                    </div>
+                    <div class="item item-divider item-positive">Recipient's Details</div>
+                    <div class="item">
+                        <table>
+                            <tr>
+                                <td><i class="ion-person positive"></i></td>
+                                <td>{{details.data[0].recipient_name}}</td>
+                            </tr>
+                            <tr>
+                                <td><i class="ion-map positive"></i></td>
+                                <td>{{details.data[0].recipient_address}}</td>
+                            </tr>
+                            <tr>
+                                <td><i class="ion-iphone positive"></i></td>
+                                <td>{{details.data[0].recipient_mobile}}</td>
+                            </tr>
+                            <tr>
+                                <td><i class="ion-ios-location-outline positive"></i></td>
+                                <td>{{details.data[0].landmark}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="item item-divider item-positive">Sender's Details</div>
+                    <div class="item">
+                        <table>
+                            <tr>
+                                <td><i class="ion-person positive"></i></td>
+                                <td>{{details.data[0].sender_name}}</td>
+                            </tr>
+                            <tr>
+                                <td><i class="ion-map positive"></i></td>
+                                <td>{{details.data[0].sender_address}}</td>
+                            </tr>
+                            <tr>
+                                <td><i class="ion-iphone positive"></i></td>
+                                <td>{{details.data[0].sender_mobile}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+
+    <div class="bar bar-footer bar-positive">
+        <div class="center_block" style="font-weight:normal;font-size:12px;">Copyright &copy; 2017 Al Rumaithy Est.</div>
+    </div>
+</ion-view>
